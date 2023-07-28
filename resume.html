@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Builder</title>
+   <link rel="stylesheet" href="resume.css">
+   
+</head>
+<body>
+  <h1>Resume Builder</h1>
+
+ 
+  <h2>Personal Information</h2>
+  <label for="fullName">Full Name:</label>
+  <input type="text" id="fullName" placeholder="John Doe">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="johndoe@example.com">
+
+
+  <h2>Education</h2>
+  <div id="educationContainer">
+  
+  </div>
+  <button onclick="addEducation()">Add Education</button>
+
+
+  <h2>Experience</h2>
+  <div id="experienceContainer">
+   
+  </div>
+  <button onclick="addExperience()">Add Experience</button>
+  
+  <h2>Strengths</h2>
+  <div id="StrengthsContainer"></div>
+  <button onclick="addStrengths()">Add Strengths</button>
+  
+  <h2>Hobbies</h2>
+  <div id="HobbiesContainer"></div>
+  <button onclick="addHobbies()">Add Hobbies</button>
+  
+  
+
+  <h2>Skills</h2>
+  <textarea id="skills" rows="4" placeholder="Enter your skills here"></textarea>
+  
+   <h2>Projects/Internships</h2>
+  <textarea id="Projects/Internships" rows="4" placeholder="Enter name of Projects/Internships here"></textarea>
+  
+
+  
+  
+
+
+  <button onclick="generateResume()">Generate Resume</button>
+  
+  
+
+</body>
+</html>
+
+  
+  
+  <script>
+  
+    function addEducation() {
+      const educationContainer = document.getElementById("educationContainer");
+      const newEducationField = document.createElement("div");
+      newEducationField.innerHTML = `
+        <label for="education">Education:</label>
+        <input type="text" name="education" placeholder="Your education details">
+      `;
+      educationContainer.appendChild(newEducationField);
+    }
+
+    function addExperience() {
+      const experienceContainer = document.getElementById("experienceContainer");
+      const newExperienceField = document.createElement("div");
+      newExperienceField.innerHTML = `
+        <label for="experience">Experience:</label>
+        <input type="text" name="experience" placeholder="Your experience details">
+      `;
+      experienceContainer.appendChild(newExperienceField);
+    }
+
+	
+	function addStrengths() {
+      const StrengthsContainer = document.getElementById("StrengthsContainer");
+      const newStrengthsField = document.createElement("div");
+      newStrengthsField.innerHTML = `
+        <label for="Strengths">Strengths:</label>
+        <input type="text" name="Strengths" placeholder="Your Strengths details">
+      `;
+      StrengthsContainer.appendChild(newStrengthsField);
+    }
+
+
+
+	function addHobbies() {
+      const HobbiesContainer = document.getElementById("HobbiesContainer");
+      const newHobbiesField = document.createElement("div");
+      newHobbiesField.innerHTML = `
+        <label for="Hobbies">Hobbies:</label>
+        <input type="text" name="Hobbies" placeholder="Your Hobbies details">
+      `;
+      HobbiesContainer.appendChild(newHobbiesField);
+    }
+
+
+
+
+
+
+  </script>
+</body>
+</html>
